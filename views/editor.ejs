@@ -1,0 +1,16 @@
+<%- include("partials/header")%>
+<div id="container">
+    <div id="codeSide">
+        <textarea id="htmlArea" placeholder="HTML CODE" oninput="showPreview()"></textarea>
+        <textarea id="cssArea" placeholder="CSS CODE" oninput="showPreview()"></textarea>
+        <textarea id="jsArea" placeholder="JS CODE" oninput="showPreview()"></textarea>
+    </div>
+    <div id="previewSide">
+        <iframe id="previewWindow"></iframe>
+    </div>
+</div>
+
+<%- include("partials/footer")%>
+
+           
+        
