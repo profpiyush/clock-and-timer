@@ -1,0 +1,52 @@
+<%- include("partials/header")%>
+<div class="headline">Current Time </div>
+<div id="container">
+    <div class="box">
+        <h1 id="hr">00</h1>
+        <h4>Hrs</h4>
+    </div>
+    <div class="box">
+        <h1 id="min">00</h1>
+        <h4>Min</h4>
+    </div>
+    <div class="box">
+        <h1 id="sec">00</h1>
+        <h4>Sec</h4>
+    </div>
+    <div class="box">
+        <h1 id="ampm">AM</h1>
+    </div>
+    <script> showDate();</script> 
+</div>
+<div class="headline">Timer</div>
+<div class="timer">
+    
+    <div class="box">
+        <h1 id="timerHr">00</h1>
+        <h4>Hrs</h4>
+    </div>
+    <div class="box">
+        <h1 id="timerMin">00</h1>
+        <h4>Min</h4>
+    </div>
+    <div class="box">
+        <h1 id="timerSec">00</h1>
+        <h4>Sec</h4>
+    </div>
+    <div class="clear"></div>
+    <div id="but">
+        <button onclick="startTimer()" id="startTimer" class="btn">Start Timer</button>
+    <button onclick="stopTimer()" class="btn">Stop Timer</button>
+    <button onclick="resetTimer()" class="btn">Reset Timer</button>
+        
+    </div>
+   </div>
+   
+    
+   
+    
+
+<%- include("partials/footer")%>
+
+           
+        

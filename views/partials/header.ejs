@@ -6,13 +6,76 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
         <link rel="stylesheet" href="/stylesheets/main.css">
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
         
     </head>
     <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar navbar-dark">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/"><i class="fas fa-edit"></i>CodeWithPiyush</a>
+                <a class="navbar-brand" href="/"><i class="fas fa-clock"></i>My Html Clock</a>
             </div>
         </div>
     </nav>
+    
+     <script>
+    setInterval(function showDate(){
+      var today= new Date();
+      var hours=today.getHours();
+      var minutes=today.getMinutes();
+      var seconds=today.getSeconds();
+      var ampm="AM";
+      if(hours==0)
+        hours=12;
+      if(hours>12){ampm="PM";hours=hours-12;}
+    document.getElementById("hr").innerHTML=hours;
+    document.getElementById("min").innerHTML=minutes;
+    document.getElementById("sec").innerHTML=seconds;
+    document.getElementById("ampm").innerHTML=ampm;
+        },1000);
+        </script>
+        <script>
+            var sec=00;
+            var min=00;
+            var hrs=00;
+            function stopTimer(){
+                clearInterval(timer);
+            }
+            function startTimer()
+            {
+            document.getElementById("startTimer").disabled=true;
+            timer=setInterval(update,1000);
+            function update(){
+              
+                    sec=sec+1;
+                    if(sec==60){min=min+1;sec=00;}
+                    if(min==60){hrs=hrs+1;min=00;}
+                    document.getElementById("timerHr").innerHTML=hrs;
+                    document.getElementById("timerMin").innerHTML=min;
+                    document.getElementById("timerSec").innerHTML=sec;
+        
+            }
+            }
+            function stopTimer(){
+                window.clearInterval(timer);
+                document.getElementById("startTimer").disabled=false;
+            }
+            function resetTimer()
+            {
+                window.clearInterval(timer);
+                document.getElementById("timerHr").innerHTML=00;
+                document.getElementById("timerMin").innerHTML=00;
+                document.getElementById("timerSec").innerHTML=00;
+                document.getElementById("startTimer").disabled=false;
+                sec=00;
+                min=00;
+                hrs=00;
+            }
+            
+
+            
+        </script>
+   

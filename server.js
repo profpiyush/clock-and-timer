@@ -5,7 +5,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 app.get("/", function(req, res){
-    res.render("editor.ejs");
+    res.render("clock.ejs");
 });
 
 app.listen(process.env.PORT,process.env.IP,function(){
