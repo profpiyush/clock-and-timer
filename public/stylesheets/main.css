@@ -1,5 +1,5 @@
 body{
-    background-color:#C21460;
+    background-color:#dc3545;
     text-align:center;
 }
 #container,.timer{
@@ -7,7 +7,7 @@ body{
     height:500px;
     align-items:center;
     justify-content:center;
-    background-color:#C21460;
+    background-color:#dc3545;
     
 }
 h1{
@@ -32,7 +32,7 @@ h1{
     padding:30px;
     padding-left: 0;
     background: mistyrose;
-    color:#C21460;;
+    color:#C21460;
     align-items:center;
     border-radius:20%;
     margin:5px;
@@ -49,21 +49,22 @@ h1{
     
 }
 .btn{
-  background:#fcad26;
+  background-color:mistyrose;
   font-size:20px;
   outline:none;
   padding:5px 15px;
   border-radius:20px;
-  box-shadow: 0 6px #efa424;
+  box-shadow: 0 6px #ffe4e170;
   position:relative;
-  color:white;
+  color:#C21460;
   letter-spacing: 3px;
   cursor:pointer;
   margin:5px;
   font-weight:bold;
+  font-family: 'Suez One', serif;
 }
 .btn:hover{
-  box-shadow: 0 4px #efa424;
+  box-shadow: 0 4px #ffe4e170;
   top:2px;
 }
 .btn:active{
